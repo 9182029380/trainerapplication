@@ -1,0 +1,16 @@
+server:
+  port: 9899
+spring:
+  application:
+    name: TrainerApplication
+  datasource:
+    url: jdbc:mysql://localhost:3306/crud
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+      show-sql: true
