@@ -27,4 +27,12 @@ public class TrainerController {
     public Trainerinfo gettrainerbyid(@PathVariable Long id){
         return service.gettrainerbyid(id);
     }
+    @PutMapping("/updatetrainer/{id}")
+    public Trainerinfo updatetrainer(@PathVariable Long id, @RequestBody Trainerinfo info){
+        return service.updatetrainer(id,info);
+    }
+    @DeleteMapping("/deletetrainer/{id}")
+    public String deletetrainer(@PathVariable Long id){
+        return service.deletetrainer(id);
+    }
 }
